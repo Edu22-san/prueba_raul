@@ -37,6 +37,16 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->get('/productos', 'PruebaController::getproducto');
+$routes->post('/productos', 'PruebaController::createproducto');
+$routes->post('/pedidos-detalle', 'PruebaController::createActionPedidosdetalle');
+$routes->get('/view', 'PruebaController::index');
+
+
+$routes->get('/viewproducto', 'ProductoController::viewProducto');
+$routes->get('/createProducto', 'ProductoController::createProducto');
+$routes->post('/create-producto-action', 'ProductoController::createActionProducto');
+$routes->get('deleteproducto/(:num)', 'ProductoController::delete/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -19,9 +19,9 @@ PRIMARY KEY(pedido_id)
 
 CREATE TABLE pedidos_detalle(
 pedidos_detalle_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-pedidos_detalle_pedido_id INT UNSIGNED NOT NULL,
-pedidos_detalle_producto_id INT UNSIGNED NOT NULL,
-CONSTRAINT fk_pedidosdetalles_pedidos FOREIGN KEY (pedidos_detalle_pedido_id) REFERENCES pedidos(pedido_id),
-CONSTRAINT fk_pedidosdetalles_productos FOREIGN KEY(pedidos_detalle_producto_id) REFERENCES productos(producto_id),
+pedido_id INT UNSIGNED NOT NULL,
+producto_id INT UNSIGNED NOT NULL,
+CONSTRAINT fk_pedidosdetalles_pedidos FOREIGN KEY (pedido_id) REFERENCES pedidos(pedido_id),
+CONSTRAINT fk_pedidosdetalles_productos FOREIGN KEY(producto_id) REFERENCES productos(producto_id),
 PRIMARY KEY(pedidos_detalle_id)
 );
