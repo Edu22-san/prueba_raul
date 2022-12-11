@@ -43,10 +43,11 @@
                                     <td><?php echo $productos->producto_id; ?></td>
                                     <td><?php echo $productos->producto_nombre ?></td>
                                     <td><?php echo $productos->producto_descripcion ?></td>
-                                    <td><?php echo $productos->producto_imagen_url ?></td>
-                                    <td><?php echo $productos->producto_precio ?></td>
+                                    <td><img class="imagen" src="<?php echo $productos->producto_imagen_url ?>" alt=""></td>
+                
+                                    <td><?php echo '$'.$productos->producto_precio ?></td>
                                     <td>
-                                        <a href="" class="btn btn-success btn-small">Edit</a>
+                                        <a href="<?php echo base_url('editproducto/' . $productos->producto_id); ?>" class="btn btn-success btn-small">Edit</a>
                                         <a href="<?php echo base_url('deleteproducto/' . $productos->producto_id); ?>" class="btn btn-danger btn-small">Delete</a>
                                     </td>
                                 </tr>

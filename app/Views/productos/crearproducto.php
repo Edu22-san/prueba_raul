@@ -12,12 +12,12 @@
 <body>
     <ul>
         <li><a class="active" href="#home">Home</a></li>
-        <li><a href="<?= base_url('ver') ?>">Productos</a></li>
+        <li><a href="<?= base_url('viewproducto') ?>">Productos</a></li>
     </ul>
     <div class="container-sm mt-5">
         <div class="card">
             <h1 class="card-header bg-dark text-white d-flex justify-content-between align-items-center">REGISTRAR
-                <form action="ver/">
+                <form action="viewproducto/">
                     <input type="submit" class="btn btn-danger btn-sm ml-auto" value="Atras" />
                 </form>
             </h1>
@@ -25,23 +25,24 @@
                 <form method="post" id="crearproducto" name="crearproducto" action="<?= site_url('/create-producto-action') ?>">
                     <div class="form-group">
                         <label>Nombre</label>
-                        <input type="text" name="producto_nombre" class="form-control" placeholder="producto_nombre">
+                        <input type="text" name="producto_nombre" class="form-control" placeholder="nombre de producto...">
                     </div>
+                    
                     <div class="form-group">
                         <label>Descripcion</label>
-                        <input type="text" name="producto_descripcion" class="form-control" placeholder="producto_descripcion">
+                        <textarea class="form-control" id="producto_descripcion" name="producto_descripcion" rows="3" placeholder="descripcion..."></textarea>
                     </div>
                     <div class="form-group">
                         <label>Imagen URL</label>
-                        <input type="text" name="producto_imagen_url" class="form-control" placeholder="producto_imagen_url">
+                        <input type="url" name="producto_imagen_url" class="form-control" placeholder="url de imagen...">
                     </div>
                     <div class="form-group">
                         <label>Precio</label>
-                        <input type="text" name="producto_precio" class="form-control" placeholder="producto_precio">
+                        <input type="text" name="producto_precio" class="form-control" placeholder="precio...">
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block">Add</button>
+                        <button type="submit" class="btn btn-primary btn-block" >Add</button>
                     </div>
                 </form>
             </div>

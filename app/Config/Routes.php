@@ -35,17 +35,29 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('', 'Home::index');
 
+//PRODUCTOS
 $routes->get('/productos', 'PruebaController::getproducto');
 $routes->post('/productos', 'PruebaController::createproducto');
+
+//PEDIDOS
+$routes->get('/pedidos', 'PruebaController::getpedido');
+$routes->post('/pedidos', 'PruebaController::createpedido');
+
+//PEDIDOS_DETALLE
 $routes->post('/pedidos-detalle', 'PruebaController::createActionPedidosdetalle');
+$routes->get('/pedidos-detalle', 'PruebaController::getpedidosdetalle');
+
+//PARTE 3 CONSUMIENDO API
 $routes->get('/view', 'PruebaController::index');
 
-
+//CRUD PRODUCTOS
 $routes->get('/viewproducto', 'ProductoController::viewProducto');
 $routes->get('/createProducto', 'ProductoController::createProducto');
 $routes->post('/create-producto-action', 'ProductoController::createActionProducto');
+$routes->get('editproducto/(:num)', 'ProductoController::updateProducto/$1');
+$routes->post('updateactionproducto', 'ProductoController::updateactionProducto');
 $routes->get('deleteproducto/(:num)', 'ProductoController::delete/$1');
 /*
  * --------------------------------------------------------------------

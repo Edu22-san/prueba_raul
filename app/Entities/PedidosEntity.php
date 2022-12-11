@@ -4,6 +4,6 @@ namespace App\Entities;
 
 use CodeIgniter\Entity\Entity;
 
-class PedidossEntity extends Entity
+class PedidosEntity extends Entity
 {
 }

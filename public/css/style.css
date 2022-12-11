@@ -14,10 +14,10 @@ body{
   }
 
   .container-card{
-      width: 20%;
-      height: 18rem;
+      width: 23%;
+      height: 20rem;
       background-color: rgb(203, 204, 238);
-      margin: 1rem;
+      margin: 15px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -29,16 +29,10 @@ body{
 -moz-box-shadow: 26px 28px 32px -27px rgba(0,0,0,0.73);
       
   }
-
-  .card{
-      width: 40%;
-      height: 20%;
-  }
-
 #container-render-card{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
@@ -97,5 +91,49 @@ ul {
   }
   .text-bold{
       font-weight: 900;
-      font-size:1.5rem;
+      font-size:1.2rem;
   }
+  .container-input{
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10px;
+
+  }
+
+  .title-input {
+    font-weight: 900;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .input-client{
+    width: 100%;
+    height: 2.5rem;
+
+    box-sizing: border-box;
+    border: 1px solid rgb(39, 75, 192);
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  .input-client:focus{
+    background-color: rgba(197, 197, 223, 0.33) ;
+    
+  }
+  .button-client {
+   float: right;
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 9px 1px;
+    cursor: pointer;
+  }
+  .button-client:hover{
+    background-color: #46d6a1;
+  }
+
+  
+  
